@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+
+<meta name = "viewport" content = "user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width /">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta charset="UTF-8">
+	<title>Page not found | Scout Ventures</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://www.scoutventures.com/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="http://www.scoutventures.com/wp-content/themes/scout/js/html5.js"></script>
+	<![endif]-->
+    
+<link href="http://www.scoutventures.com/wp-content/themes/scout/css/style.css" rel="stylesheet" type="text/css">
+<link href="http://www.scoutventures.com/wp-content/themes/scout/css/responsive.css" rel="stylesheet" type="text/css">
+<link href="http://www.scoutventures.com/wp-content/themes/scout/fonts/stylesheet.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="http://www.scoutventures.com/wp-content/themes/scout/css/sv.css">
+<script src="http://www.scoutventures.com/wp-content/themes/scout/js/jquery.min.js"></script>
+<script src="http://www.scoutventures.com/wp-content/themes/scout/scrolldeck/jquery00.js"></script>
+<script src="http://www.scoutventures.com/wp-content/themes/scout/scrolldeck/jquery01.js"></script>
+<script src="http://www.scoutventures.com/wp-content/themes/scout/scrolldeck/jquery03.js"></script>
+
+<script type="text/javascript" src="http://www.scoutventures.com/wp-content/themes/scout/js/jcarousellite.js"></script> 
+<script type="text/javascript" src="http://www.scoutventures.com/wp-content/themes/scout/js/eventswipe.js"></script> 
+<script type="text/javascript" src="http://www.scoutventures.com/wp-content/themes/scout/js/eventmove.js"></script> 
+
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		
+		jQuery(".cross").click(function(){
+			jQuery(".contact-container").fadeOut();
+			jQuery(this).hide();
+			jQuery(".openup").show('slow');
+		});
+		
+		jQuery(".cross").click();
+		
+		jQuery(".openup").click(function(){
+			jQuery(".contact-container").fadeIn();
+			jQuery(this).hide();
+			jQuery(".cross").show('slow');
+		});
+		
+		jQuery("#closable").show();
+		jQuery(".closable").hide();
+				
+		jQuery("#closable").click(function(){
+			$rel = jQuery(this).attr("rel");
+			if($rel == 'off')
+			{
+				jQuery(this).attr("rel", 'on');
+				d = 180;
+				jQuery('img',this).css({
+				'-moz-transform':'rotate('+d+'deg)',
+				'-webkit-transform':'rotate('+d+'deg)',
+				'-o-transform':'rotate('+d+'deg)',
+				'-ms-transform':'rotate('+d+'deg)',
+				'transform': 'rotate('+d+'deg)'
+				});
+				jQuery(".closable").hide('slow');
+				jQuery('.advisor-detail > div').live().removeClass('active');
+				jQuery("#closable").hide();
+			} else {
+				d = 0;
+				jQuery('img',this).css({
+				'-moz-transform':'rotate('+d+'deg)',
+				'-webkit-transform':'rotate('+d+'deg)',
+				'-o-transform':'rotate('+d+'deg)',
+				'-ms-transform':'rotate('+d+'deg)',
+				'transform': 'rotate('+d+'deg)'
+				});
+				jQuery(this).attr("rel", 'off');
+				jQuery(".closable").show('slow');
+			}	
+			//jQuery('.advisor-detail > div').removeClass('active');
+			//alert('jQuery("#closable").click()');
+		});
+		
+		jQuery("#closable").click();
+		jQuery(".showable").click(function(){
+			$rel = jQuery(this).attr("rel");
+			jQuery("#" + $rel).hide();
+		});
+		
+		jQuery('img#close').click(function ()
+		{
+			jQuery('#formHS').val('actived');
+		});
+	});
+</script>
+
+<!--filter -->
+
+<link rel="stylesheet" href="http://www.scoutventures.com/wp-content/themes/scout/filter/css/styles.css" />
+<script src="http://www.scoutventures.com/wp-content/themes/scout/filter/js/jquery.quicksand.js"></script>
+<script src="http://www.scoutventures.com/wp-content/themes/scout/filter/js/script.js"></script>
+
+<!-- carasol slider -->
+<script type="text/javascript" src="http://www.scoutventures.com/wp-content/themes/scout/js/mousewheel.js"></script>
+<script type="text/ecmascript">
+
+/**
+ * jQuery.fullBg
+ * Version 1.0
+ * Copyright (c) 2010 c.bavota - http://bavotasan.com
+ * Dual licensed under MIT and GPL.
+ * Date: 02/23/2010
+**/
+(function($)
+	{
+		$.fn.fullBg=function()
+		{
+			var bgImg=$(this);
+			bgImg.addClass('fullBg');
+			function resizeImg()
+			{
+				var imgwidth=bgImg.width();
+				var imgheight=bgImg.height();
+				var winwidth=$(window).width();
+				var winheight=$(window).height();
+				var widthratio=winwidth/imgwidth;var heightratio=winheight/imgheight;
+				var widthdiff=heightratio*imgwidth;
+				var heightdiff=widthratio*imgheight;
+				if(heightdiff>winheight)
+				{
+					//bgImg.css({height:heightdiff+'px'});
+					bgImg.css({width:winwidth+'px',height:heightdiff+'px'});
+				} else {
+					//bgImg.css({height:winheight+'px'});
+					bgImg.css({width:widthdiff+'px',height:winheight+'px'});
+				}
+				pageCenter();
+			}
+			resizeImg();			
+			$(window).resize(function(){resizeImg();});
+		};
+	})
+(jQuery)
+
+$.noConflict();
+jQuery(function() {
+    jQuery(".slider").jCarouselLite({
+        btnNext: ".next",
+        btnPrev: ".prev",
+        mouseWheel: false,
+        auto: false,
+        speed: 2000,
+        visible: 3
+    });
+	
+	jQuery(".milestones").jCarouselLite({
+        btnNext: ".right-arrow",
+        btnPrev: ".left-arrow",
+        mouseWheel: true,
+        auto: false,
+        speed: 2000,
+        visible: 7
+    });
+	
+	
+	/*jQuery(".testimonial-slider").jCarouselLite({
+        btnNext: ".next",
+        btnPrev: ".prev",
+        mouseWheel: true,
+        auto: 3000,
+        speed: 2000,
+        visible: 1
+    });*/
+	
+	setTimeout(bounce,3000);
+	jQuery('.res-dropdown ul li').addClass('nav-button');
+	jQuery("#banner").fullBg();	
+	jQuery('.how-we-do-circles li').click(function ()
+	{
+		var indexs = jQuery('.how-we-do-circles li').index( this );
+		var className = jQuery(this).attr('class');
+		if(className == 'active')
+		{
+			jQuery('.how-we-do-circles li').removeClass('active');
+			jQuery('.mobileClass').hide('fast');
+ 			jQuery('#dropdonws').slideUp('fast');
+		} else {
+			jQuery('.mobileClass').hide('fast');
+			jQuery('.how-we-do-circles li').removeClass('active');
+			jQuery(this).addClass('active');
+			jQuery('#dropdonws').slideUp('fast', function ()
+			{
+				jQuery('.how-we-do-dropdown-inner').hide();
+				jQuery('.how-we-do-dropdown-inner').eq(indexs).show();
+				jQuery('.mobileClass').eq(indexs).show('slow');
+				jQuery('#dropdonws').slideDown('slow');
+			});
+		}
+	});
+	
+	/*jQuery('ul.how-we-do-time li').click(function(){
+		jQuery('ul.how-we-do-time li').removeClass('actived');
+		jQuery(this).addClass('actived');
+	});*/
+	
+	/*jQuery("a#rightarrow").click(function()
+	{
+		var $toHighlight = jQuery('.actived').next().length > 0 ? jQuery('.actived').next() : jQuery('ul.how-we-do-time li').first();
+		jQuery('.actived').removeClass('actived');
+		$toHighlight.addClass('actived');
+		//console.log($toHighlight);
+		jQuery('a',$toHighlight).click();
+		//alert('testNext');
+	});
+	
+	jQuery("a#leftarrow").click(function()
+	{
+		var $toHighlight = jQuery('.actived').prev().length > 0 ? jQuery('.actived').prev() : jQuery('ul.how-we-do-time li').last();
+		jQuery('.actived').removeClass('actived');
+		$toHighlight.addClass('actived');
+		//console.log($toHighlight);
+		jQuery('a',$toHighlight).click();
+		//alert('testPrev');
+	});*/
+});
+
+
+jQuery(window).scroll(function() 
+{
+	$width = jQuery('.portfolio-container').css('width');
+	$height = 300;
+	if($width == '320px')
+	{
+		$height = 700;
+	}
+	
+	if(jQuery(window).scrollTop() + jQuery(window).height() > (jQuery(document).height() - $height)) 
+	{
+		$formHS = jQuery('#formHS').val();
+		if($formHS != 'actived')
+		{
+			jQuery(".openup").click();
+		}
+	}
+});
+
+function bounce()
+{
+	jQuery( "#bounceble" ).animate({marginTop:'-20px'}, 500,'easeOutBounce', function() {	
+		jQuery(this).animate({marginTop:'0px'}, 500,'easeOutBounce',function (){setTimeout(bounce,3000);});
+	});
+}
+
+function reOrder()
+{
+	$width = jQuery('.portfolio-container').css('width');
+	
+	$a = 8;
+	$b = 5
+	
+	if($width == '320px')
+	{
+		$a = 4;
+		$b = 1
+	}
+	
+	if($width == '480px')
+	{
+		$a = 5;
+		$b = 2
+	}
+	
+	if($width == '600px')
+	{
+		$a = 6;
+		$b = 3
+	}	
+	
+	$test = 0;
+	$loops = 0;
+	$loopy = 0;
+	jQuery('#stages li').each(function (){
+		$test++;		
+		if($test == $a)
+		{
+			$loops++;
+			$loopy++;
+			jQuery(this).addClass('test');
+			$test = 0;
+		}
+				
+		if($loops == 1 && $test == $b)
+		{
+			jQuery(this).addClass('tests');
+			$loops = 0;
+			$test = 0;
+		} else {
+		}			
+	});
+}
+</script>
+<!-- parallax schroll -->
+
+<script src="http://www.scoutventures.com/wp-content/themes/scout/paralax-scroll/stellar0.js"></script>
+<script>
+jQuery(function(){
+	jQuery.stellar({
+		horizontalScrolling: false,
+		verticalOffset: 0
+	});
+	
+	jQuery('#teamMembers').scroller({contentArea: '#team .container'});
+	jQuery('#advisorsMembers').find('li').shuffle();
+	jQuery('#advisorsMembers').scroller({contentArea: '#advisors .container',margin:10});	
+	jQuery("#advisorsMembers #advisorListing li").click(function()
+	{
+		if ( jQuery('#closable').is(":visible") )
+		{
+		} else { 
+			jQuery('#closable').click().show();
+		}
+	});
+	//jQuery('.advisor-list li.active').removeClass('active');
+	jQuery('.popup-close-btn').click(function(){
+		jQuery('.pf-popup').hide();
+	});
+	
+	jQuery('.res-dropdown .res-nav li a').click(function (){
+	
+	});
+	
+	jQuery('#filters a').click(function (){
+		jQuery('#filters a').removeClass('active');
+		jQuery(this).addClass('active');
+		$rel = jQuery(this).attr('rel');
+		//alert($rel);
+		jQuery('#stages').attr('class','');
+		jQuery('#stages').addClass($rel);
+		jQuery('#stages li a .texture').show();
+		jQuery('#stages li.'+$rel+' a .texture').hide();
+	});	
+	reOrder();
+});
+
+function showPopUp(ids)
+{
+	jQuery('.pf-popup').hide();
+	$datatags = jQuery('#' + ids).attr('rel');
+	if($datatags !="Blank")
+	{
+		jQuery('#' + ids).show();
+	}
+}
+
+function pageCenter()
+{
+	Height = jQuery('#header').height();
+	banner = jQuery('#banner').height();
+	samples = parseInt(Height + banner);
+	test = '-' + Height + 'px';
+	jQuery('#samples').css('margin-top',samples);
+	jQuery('.banner-container').css({height:banner,marginTop:test});
+	//alert(test);
+}
+
+function scrollToTop()
+{
+	jQuery('html, body').animate({scrollTop:0}, 'slow');
+}
+</script>
+<!--custom js-->
+<script type="text/javascript" src="http://www.scoutventures.com/wp-content/themes/scout/js/custom.js"></script>
+<script type="text/javascript" src="http://www.scoutventures.com/wp-content/themes/scout/js/plugins.js"></script>
+<style>
+	#contact
+	{
+		height: 100%;
+		margin: 0px;
+		padding: 0px
+	}
+</style>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script>
+	function initialize()
+	{
+		//var myLatlng =new google.maps.LatLng(40.714247,-74.009259);
+		 var mymarker = new google.maps.LatLng(40.714247,-74.009259);
+         var myLatlng = new google.maps.LatLng(40.714247,-74.0164745);
+		var styles =[{
+						featureType: "all", 
+						stylers: [{saturation: -100 }]
+					},
+					{
+						featureType: "road.highway",
+						elementType: "geometry.fill",
+						stylers: [{ color: "#1f7729" }]},
+					{
+						featureType: "road.highway",
+						elementType: "labels.text.stroke",
+						stylers: [{color:"#ffffff"}] 
+					}];					
+		var mapOptions = { 
+			zoom: 16,
+			scrollwheel: false,  
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			styles: styles,
+			center: myLatlng
+		}
+		
+		var map = new google.maps.Map(document.getElementById('contact2'), mapOptions);
+		var contentString = '<div id="content">'+
+		'<div id="siteNotice">'+
+		'</div>'+
+		'<h2 id="firstHeading" class="firstHeading">Addrerss:</h2>'+
+		'<div id="bodyContent">'+
+		'<p>47 murray st new york, ny 10007</p>'+''+'</div>';
+		
+		var infowindow = new google.maps.InfoWindow({content: contentString});
+		var image = 'http://www.scoutventures.com/wp-content/themes/scout/images/map-icon.png';
+		var marker = new google.maps.Marker({
+				position: mymarker,
+				map: map,
+				icon: image,
+				title: '47 murray st new york, ny 10007'
+				});
+		
+		google.maps.event.addListener(marker, 'click', function() 
+		{
+			infowindow.open(map,marker);
+		});
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+	
+</script>
+<link rel="alternate" type="application/rss+xml" title="Scout Ventures &raquo; Feed" href="http://www.scoutventures.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Scout Ventures &raquo; Comments Feed" href="http://www.scoutventures.com/comments/feed/" />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.scoutventures.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='twentythirteen-fonts-css'  href='//fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C700%2C300italic%2C400italic%2C700italic%7CBitter%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='http://www.scoutventures.com/wp-content/themes/scout/fonts/genericons.css?ver=2.09' type='text/css' media='all' />
+<link rel='stylesheet' id='twentythirteen-style-css'  href='http://www.scoutventures.com/wp-content/themes/scout/style.css?ver=2013-07-18' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentythirteen-ie-css'  href='http://www.scoutventures.com/wp-content/themes/scout/css/ie.css?ver=2013-07-18' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.scoutventures.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.scoutventures.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.8.3" />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<!-- All in one Favicon 4.3 --><link rel="shortcut icon" href="http://54.187.227.20/wp-content/uploads/2014/04/favicon.png" />
+<link rel="icon" href="http://54.187.227.20/wp-content/uploads/2014/04/favicon1.png" type="image/png"/>
+	<style type="text/css" id="twentythirteen-header-css">
+			.site-header {
+			background: url(http://www.scoutventures.com/wp-content/themes/scout/images/headers/circle.png) no-repeat scroll top;
+			background-size: 1600px auto;
+		}
+		</style>
+	</head>
+<body class="error404 single-author">
+<div class="header-wrapper" id="header">
+  <div class="header-container">
+    <h1 class="logo">
+    	  <a  href="http://www.scoutventures.com/"><img src="http://www.scoutventures.com/wp-content/themes/scout/images/logo.jpg" alt="logo"></a>
+	      </h1>
+    <div class="res-menu">
+      <a href="#nav" class="somelink">
+      <span>_</span>
+      <span>_</span>
+      <span>_</span>
+      </a>
+      <div class="res-dropdown">
+        <ul class="res-nav">
+                	<li><a class="nav-button about" href="http://www.scoutventures.com/#about" >ABOUT US</a></li>
+            <li><a class="nav-button team" href="http://www.scoutventures.com/#team" >team</a></li>
+            <li><a class="nav-button how-we-do-it" href="http://www.scoutventures.com/#how-we-do-it">HOW WE DO IT </a></li>
+                        <li><a href="http://www.scoutventures.com/#advisors" class="nav-button advisors">advisors</a></li>
+            <li><a href="http://www.scoutventures.com/#portfolio" class="nav-button portfolio">portfolio </a></li>
+            <li><a href="http://www.scoutventures.com/in-the-press/" class="nav-button portfolio">press</a></li>
+            <li><a href="http://www.scoutventures.com/#contact" class="nav-button contact">CONTACT</a></li>
+               </ul>
+        <div class="investor-res">
+          <a href="http://www.scoutventures.com/join-scouts-mission"> INVESTORS</a>
+        </div>
+      </div>
+    </div>
+    <div class="investor">
+      <a href="http://www.scoutventures.com/join-scouts-mission"> INVESTORS</a>
+    </div>
+    <nav>
+      <ul>
+            	<li><a class="nav-button about" href="http://www.scoutventures.com/#about" >ABOUT US</a></li>
+            <li><a class="nav-button team" href="http://www.scoutventures.com/#team" >team</a></li>
+            <li><a class="nav-button how-we-do-it" href="http://www.scoutventures.com/#how-we-do-it">HOW WE DO IT </a></li>
+                        <li><a href="http://www.scoutventures.com/#advisors" class="nav-button advisors">advisors</a></li>
+            <li><a href="http://www.scoutventures.com/#portfolio" class="nav-button portfolio">portfolio </a></li>
+            <li><a href="http://www.scoutventures.com/in-the-press/" class="nav-button portfolio">press</a></li>
+            <li><a href="http://www.scoutventures.com/#contact" class="nav-button contact">CONTACT</a></li>
+             </ul>
+          </nav>
+  </div>
+</div>
+<div id="banners" style=""></div>
+	
+		<!--<header id="masthead" class="site-header" role="banner">
+			<a class="home-link" href="" title="" rel="home">
+				<h1 class="site-title"></h1>
+				<h2 class="site-description"></h2>
+			</a>
+
+			<div id="navbar" class="navbar">
+				<nav id="site-navigation" class="navigation main-navigation" role="navigation">
+					<h3 class="menu-toggle"></h3>
+					<a class="screen-reader-text skip-link" href="#content" title=""></a>
+														</nav><!-- #site-navigation -->
+			<!--</div><!-- #navbar 
+		</header><!-- #masthead 
+        -->
+
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+
+			<div class="page-wrapper" style="padding: 78px 30px 0;max-width: 1000px;margin: 0 auto 4px auto;text-align: center;">
+				<div class="page-content">
+					<h2>404 Page not found!</h2>
+					<p>It looks like nothing was found at this location. Maybe try a search?</p>
+
+					<form role="search" method="get" class="search-form" action="http://www.scoutventures.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form>				</div><!-- .page-content -->
+			</div><!-- .page-wrapper -->
+
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+<div class="contact-wrapper checkit" id="contact" style="position:relative; height:643px;">
+    <div class="TopColor"></div>
+    <div class="mapblock"></div>
+  <div class="contact-wrapper-inner">
+    <div class="contact-container">
+      <div class="contact-us-form-outer">
+        <div class="contact-us-form">
+          <div class="cross" style="
+                font-weight: bold;
+                text-align: right;
+                padding-right: 15px;
+                padding-top: 10px;
+                margin-bottom: -48px;
+                cursor:pointer;
+"><img id="close" width="14" height="13" src="http://www.scoutventures.com/wp-content/themes/scout/images/pop-close-btn.jpg" alt="X"></div>
+          <div class="contact-us-form-inner">
+            <div class="wpcf7" id="wpcf7-f333-o1"><form action="/wp-content/themes/scout/images/home_banner.jpg#wpcf7-f333-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="333" />
+<input type="hidden" name="_wpcf7_version" value="3.7.2" />
+<input type="hidden" name="_wpcf7_locale" value="en_US" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f333-o1" />
+<input type="hidden" name="_wpnonce" value="ad7f8b6d9b" />
+</div>
+<div class="row">
+  <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required text-field" aria-required="true" aria-invalid="false" placeholder="NAME" /></span>
+</div>
+<div class="row">
+  <span class="wpcf7-form-control-wrap listmenu"><select name="listmenu" class="wpcf7-form-control wpcf7-select list-menu" aria-invalid="false"><option value="WHO ARE YOU">WHO ARE YOU</option><option value="Entrepreneur">Entrepreneur</option><option value="Investor">Investor</option><option value="Media">Media</option><option value="Other">Other</option></select></span>
+</div>
+<div class="row">
+  <span class="wpcf7-form-control-wrap Company"><input type="text" name="Company" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required text-field" aria-required="true" aria-invalid="false" placeholder="COMPANY" /></span>
+</div>
+<div class="row">
+  <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email text-field" aria-required="true" aria-invalid="false" placeholder="EMAIL" /></span>
+</div>
+<div class="row">
+  <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required text-area" aria-required="true" aria-invalid="false" placeholder="MESSAGE"></textarea></span>
+</div>
+<div class="row"><input type="submit" value="SEND" class="wpcf7-form-control wpcf7-submit send-btn" /></p>
+<div class="checkbox-outer"><span class="wpcf7-form-control-wrap checkbox-162"><span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required checkbox"><span class="wpcf7-list-item first last"><input type="checkbox" name="checkbox-162[]" value="I understand, in transmitting this form, I agree that Scout is not responsible for any proprietary or confidential material that may be contained in this submission." />&nbsp;<span class="wpcf7-list-item-label">I understand, in transmitting this form, I agree that Scout is not responsible for any proprietary or confidential material that may be contained in this submission.</span></span></span></span>
+    </div>
+</div>
+<div style="clear:both;"></div>
+<div class="wpcf7-response-output wpcf7-display-none"></div></form></div>            <input type="hidden" id="formHS" value="on" />
+            <div class="row logo-bottom">
+              <img src="http://www.scoutventures.com/wp-content/themes/scout/images/logo.jpg" width="52" height="62" alt="logo"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="contact2" style="height:643px; position:absolute; top:0px; width:100%; z-index:1;"></div>
+</div>
+<footer>
+  <div class="openup" style="display: none;background: #fff;font-weight: bold;text-transform: uppercase;padding: 5px 10px;text-align: center;width: 100px;margin: 0px auto;position: relative;top: -26px;border: 1px solid #999;border-radius: 5px;border-bottom:0px; cursor:pointer; border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;">Open Form</div>
+  <div class="footer-inner">
+    <div class="bee-icon">
+    	<a href="http://www.scoutventures.com/bee-story/">
+        	<img src="http://www.scoutventures.com/wp-content/themes/scout/images/bee.gif" width="75" height="75" alt="img">
+        </a>
+    </div>
+    
+    <div class="back-to-top">
+            <a href="#banners" class="nav-button"><img src="http://www.scoutventures.com/wp-content/themes/scout/images/back-to-top.png" width="49" height="48" alt="img"></a>
+          </div>
+    <ul class="footer-social-icons">
+      <li>
+        <a href="https://twitter.com/ScoutVentures" target="_blank"><img src="http://www.scoutventures.com/wp-content/themes/scout/images/footer-twitter.jpg" width="36" height="26" alt="twitter" /></a>
+      </li>      
+      <li>
+        <a href="https://www.linkedin.com/company/scout-ventures" target="_blank"><img src="http://www.scoutventures.com/wp-content/themes/scout/images/footer-linkedin.jpg" width="36" height="26" alt="linkedin" /></a>
+      </li>
+      <li>
+        <a href="https://angel.co/scout-ventures" target="_blank"><img src="http://www.scoutventures.com/wp-content/themes/scout/images/angel_icon.png" width="36" height="26" alt="facebook" /></a>
+      </li>
+    </ul>
+    <ul class="address">
+      <!-- <li>452 Fifth Ave, 14th Floor New York, NY 10018 </li>-->
+      <li>47 Murray St New York, ny 10007 Lower Level</li>
+    </ul>
+  </div>
+</footer>
+<script type="text/javascript" src="http://www.scoutventures.com/wp-content/themes/scout/js/plugins.js"></script>
+<script type="text/javascript" src="http://www.scoutventures.com/wp-content/themes/scout/js/main.js"></script>
+</body></html>

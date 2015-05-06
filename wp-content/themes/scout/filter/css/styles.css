@@ -1,0 +1,220 @@
+/*----------------------------
+	Green filter bar
+-----------------------------*/
+
+
+#filter {
+	display: block;
+	margin: 0 0 10px 0;
+	position: relative;
+	width:100%;
+	text-align: center;
+	clear:both;
+	height:auto;
+}
+#filter a {
+	
+	background: none repeat scroll 0 0 #dcdddf;
+	color: #525252;
+	display: block;
+	display: inline-block;
+	font-size: 14px;
+	height: 38px;
+	line-height: 38px;
+	padding: 0 50px;
+	margin: 0 0px 10px 2px;
+	text-transform: uppercase;
+	text-decoration:none;
+}
+#filter a:hover {
+	text-decoration: none;
+	color:#116233;
+}
+#filter a.active {
+	color:#116233;
+}
+
+
+
+/* Nadeem */
+#filters {
+	display: block;
+	margin: 0 0 10px 0;
+	position: relative;
+	width:100%;
+	text-align: center;
+	clear:both;
+	height:auto;
+}
+#filters a {
+	
+	background: none repeat scroll 0 0 #dcdddf;
+	color: #525252;
+	display: block;
+	display: inline-block;
+	font-size: 14px;
+	height: 38px;
+	line-height: 38px;
+	padding: 0 50px;
+	margin: 0 0px 10px 2px;
+	text-transform: uppercase;
+	text-decoration:none;
+}
+#filters a:hover {
+	text-decoration: none;
+	color:#116233;
+}
+#filters a.active {
+	color:#fff;
+	background: #116233;
+}
+/*----------------------------
+	Content area
+-----------------------------*/
+
+	
+#container {
+	display: block;
+	overflow: hidden;
+	margin: 0 auto;
+	clear:both; width:100%;
+}
+
+#container li
+{
+	display: block;
+	float: left;
+	height: 115px;
+	list-style: none outside none;
+	margin: 2px;
+	width: 100px;	
+	margin-bottom:-25px;
+}
+
+#container li a {
+    display: block;
+    position: relative;
+}
+
+#container li a img
+{
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+
+#container li a .texture
+{
+	z-index:1;
+}
+
+
+.ALL li a .texture
+{
+	display:none !important;
+}
+
+#container ul {
+	 
+	text-align: center;
+}
+#container ul.hidden {
+	display: none;
+}
+
+
+.test
+{
+	padding-left:52px;
+}
+
+.tests
+{
+	/*border:solid 3px #000;*/
+}
+.clearPortfolio{
+	clear:both; height:25px;
+}
+
+@media all and (max-width:900px){
+/*===================pf popup css============================*/
+
+
+.pf-popup {
+	width: auto;
+	padding: 60px 5%;
+	margin: 0 20px
+}
+.pf-popup-left {
+	float: none;
+	width: auto;
+	margin-right: 0;
+	padding-left: 0;
+}
+.popup-project-detail {
+	list-style: none;
+}
+.popup-project-detail li {
+	display: block;
+	margin-bottom: 25px;
+}
+.pf-popup-right {
+	float: none;
+	width: auto;
+	min-height: auto;
+}
+}
+
+
+
+@media all and (max-width:800px){
+	.test{
+		
+	}
+	#container li{
+	}
+	.clearPortfolio{
+		
+	}
+	.advisor-detail {
+		padding-top:90px;
+	}
+	.test{
+		
+	}
+	#container li{
+	}
+}
+
+@media all and (max-width:670px){
+	#container{
+		width:520px;
+	}
+	.test{
+		
+	}
+	#container li{
+	}
+}
+
+@media all and (max-width:550px){
+	#container{
+		width:416px;
+	}
+	.test{
+		
+	}
+	#container li{
+	}
+}
+
+@media all and (max-width:370px){
+	#container{
+		width:312px;
+	}
+	.test{
+		
+	}
+	#container li{
+	}
+}

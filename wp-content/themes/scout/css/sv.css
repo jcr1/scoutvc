@@ -1,0 +1,178 @@
+/* Scroller */
+.scroller-container {
+	margin-bottom: 15px;
+}
+.scroller {
+	margin: 0;
+}
+.scroller h2, .scroller h3, .scroller p {
+	line-height: 25px;
+	text-align: center;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=45)";
+	filter: alpha(opacity=45);
+	opacity: 0.45;
+}
+.scroller .overlay {
+	opacity:0.60;
+	position:absolute;
+}
+#team .scroller .overlay {
+	height:397px;
+	width: 236px;
+}
+#advisors .scroller .overlay {
+	width:128px;
+	height:153px;
+}
+.scroller .active .overlay {
+	display:none;
+}
+.scroller .active h2, .scroller .active h3, .scroller .active p {
+	opacity: 1;
+}
+#team .scroller-container {
+	width: 100%;
+	height: 370px;
+	position: relative;
+	overflow: hidden;
+}
+#advisors .scroller-container {
+	width: 100%;
+	position: relative;
+	height:153px;
+}
+.scroller-container .control {
+	width: 60px;
+	height: 100%;
+	position: absolute;
+	z-index: 4;
+	cursor: pointer;
+	right: 0;
+	top: 0;
+}
+.scroller-container .control:hover {
+	background: url("../img/arrow_n.png") no-repeat scroll 5px 98px #FFFFFF;
+	height: 271px;
+	opacity: 0.4;
+}
+#advisors .scroller-container .control:hover {
+	opacity:0.4;
+	background-position: 5px 42px;
+}
+#advisors .scroller-container .ctrl-next:hover {
+	opacity:0.4;
+	background-position:5px 50px;
+	height: 153px;
+}
+.scroller-container .ctrl-prev {
+	left: 0;
+}
+.scroller-container .ctrl-prev:hover {
+	background: url("../img/arrow_n.png") no-repeat scroll 5px 98px #FFFFFF;
+	height: 153px;
+	opacity: 0.4;
+	transform:rotate(180deg);
+	-webkit-transform:rotate(180deg); /* Safari and Chrome */
+}
+#team .scroller-container .ctrl-prev:hover {
+	background: url("../img/arrow_n.png") no-repeat scroll 5px 98px #FFFFFF;
+	height: 272px !important;
+	opacity: 0.4;
+	transform: rotate(180deg);
+}
+.scroller-container .scroller-clip {
+	height: 100%;
+	position: relative;
+}
+#team .scroller {
+	width: 2600px;
+	height: 460px;
+	position: absolute;
+}
+#advisors .scroller {
+	width: 2600px;
+	height: 220px;
+	position: absolute;
+}
+.scroller li {
+	list-style:none;
+	cursor: pointer;
+}
+#team .scroller li {
+	 margin: 0 8.7px;
+	width: 236px;
+	padding: 0px;
+	
+}
+@media (min-width: 790px) and (max-width: 815px) {
+#team .scroller li {
+	margin: 0 8.5px;
+}
+}
+@media (min-width: 700px) and (max-width: 785px) {
+#team .scroller li {
+    margin: 0 8px;
+}
+}
+@media (min-width: 590px) and (max-width: 620px) {
+#team .scroller li {
+    margin: 0 9.0px;
+}
+}
+@media (min-width: 460px) and (max-width: 500px) {
+#team .scroller li {
+    margin: 0 8.9px;
+}
+}
+@media (min-width: 300px) and (max-width: 420px) {
+#team .scroller li {
+    margin: 0 8.0px;
+}
+}
+#team .scroller .active, #advisors .scroller .active {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1.0;
+}
+#advisors .scroller li h3 {
+	margin-top: 10px;
+	line-height: 25px;
+	text-align: center;
+}
+#sv-map {
+	width: 100%;
+	height: 380px;
+	margin-bottom: 45px;
+}
+#overlay {
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.8;
+	position:absolute;
+	z-index: 99999999;
+	top:0;
+	left:0;
+	display:none;
+}
+.load > a {
+	font-size: 19px;
+	font-weight: bold;
+	color:#004b22;
+	position:absolute;
+	top:8px;
+	left:35px;
+}
+.stopScrolling {
+	height: 100%;
+	overflow: hidden;
+}
+.container > div {
+	display:none;
+}
+.container > div.active {
+	display:block;
+}
+#team .scroller li .member-name{
+	width:auto !important;
+}

@@ -1,0 +1,237 @@
+/*
+Theme Name: Scout Ventures
+Theme URI: http://virtual-force.com
+Author: the Virtual Force team
+Author URI: http://virtual-force.com/
+Description: The 2014 theme for WordPress takes us back to the blog, featuring a full range of post formats, each displayed beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matching header images, beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: twentythirteen
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Reset
+ * 2.0 - Repeatable Patterns
+ * 3.0 - Basic Structure
+ * 4.0 - Header
+ *   4.1 - Site Header
+ *   4.2 - Navigation
+ * 5.0 - Content
+ *   5.1 - Entry Header
+ *   5.2 - Entry Meta
+ *   5.3 - Entry Content
+ *   5.4 - Galleries
+ *   5.5 - Post Formats
+ *   5.6 - Attachments
+ *   5.7 - Post/Paging Navigation
+ *   5.8 - Author Bio
+ *   5.9 - Archives
+ *   5.10 - Search Results/No posts
+ *   5.11 - 404
+ *   5.12 - Comments
+ *   5.13 - Multisite
+ * 6.0 - Sidebar
+ *   6.1 - Widgets
+ * 7.0 - Footer
+ * 8.0 - Media Queries
+ * 9.0 - Print
+ * ----------------------------------------------------------------------------
+ */
+/**
+ * 1.0 Reset
+ *
+ * Modified from Normalize.css to provide cross-browser consistency and a smart
+ * default styling of HTML elements.
+ *
+ * @see http://git.io/normalize
+ * ----------------------------------------------------------------------------
+ */
+
+
+.lower_join {
+	overflow:hidden;
+}
+.banner-wrapper .banner-container a {
+	color:#FFF;
+	text-decoration:none;
+}
+.banner-wrapper .banner-container a:hover {
+	color:#FFF;
+	text-decoration:none;
+}
+.press-wrapper .press-container .press-heading a {
+	color:#FFF;
+	text-decoration:none;
+}
+.press-wrapper .press-container .press-heading a:hover {
+	color:#FFF;
+	text-decoration:none;
+}
+.advisor-top h2 {
+	text-transform:uppercase;
+}
+.advisor-detail p strong {
+	display:block;
+}
+
+/*.scout-team-detail p strong
+{
+	display:block;
+}*/
+
+
+.TopColor {
+	position:absolute;
+	top:0px;
+	width:100%;
+	height:13px;
+	background-color:#2c734b;
+	z-index:10;
+}
+.in-the-press-wrapper .testimonials-container {
+	min-height:inherit;
+	padding:0px;
+}
+.fundingLin a {
+	background-color:#c7c7c7;
+	-webkit-border-radius: 9px;
+	-moz-border-radius: 9px;
+	border-radius: 9px;
+	color: #FFFFFF;
+	display: block;
+	font-size: 14px;
+	margin: 8px 0;
+	padding: 5px;
+	text-transform: uppercase;
+}
+.portfolio-container .portfolio {
+	position:relative;
+}
+.portfolio-container .pf-popup {
+	position:absolute;
+	top:30%;
+	display:none;
+	z-index:5;
+}
+.aboutbox {
+	display:block;
+	width:76px;
+	height:71px;
+	text-align:center;
+	background-image:url(images/banner-btn-bg.png);
+	background-repeat:no-repeat;
+}
+.aboutbox img {
+	padding:25px;
+}
+.pf-popup-left h3 {
+	color:#525252;
+	font-size:16px;
+	padding:0px;
+	margin:0px;
+	border:none;
+	margin-top:20px;
+	font-family: 'roboto_condensedregular';
+	text-transform:none !important;
+	float:none !important;
+}
+.pf-popup-left, .pf-popup-left a, .pf-popup-left p, .pf-popup-left p a {
+	color:#525252 !important;
+	font-size:16px !important;
+	border:none;
+	font-family:'roboto_condensedlight';
+	text-transform:none !important;
+}
+ @media all and (max-width:900px) {
+ .pf-popup-right {
+ margin-top:30px;
+}
+}
+.testimonial-slider ul {
+	list-style:none;
+}
+ @media all and (max-width:530px) {
+ .banner-center-text img {
+ width: 37%;
+ margin-top: -35px;
+}
+}
+.calender-detail .main-detail {
+	margin-top:-15px;
+}
+.advisor-list .img {
+	/* IE 8 */
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	/* IE 5-7 */
+
+  filter: alpha(opacity=30);
+	/* Netscape */
+
+  -moz-opacity: 0.3;
+	/* Safari 1.x */
+
+  -khtml-opacity: 0.3;
+	/* Good browsers */
+
+  opacity: 0.3;
+}
+.advisor-list li.active > .img {
+	/* IE 8 */
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+	/* IE 5-7 */
+
+  filter: alpha(opacity=90);
+	/* Netscape */
+
+  -moz-opacity: 0.9;
+	/* Safari 1.x */
+
+  -khtml-opacity: 0.9;
+	/* Good browsers */
+
+  opacity: 0.9;
+}
+
+.mapblock
+{
+	z-index:2;
+	top:0px;
+	bottom:0px;
+	width:100%;
+	height:100%;
+	position:absolute;
+	display:none;
+}
+
+@media all and (max-width:370px)
+{
+	.press-slider ul li a
+	{
+		padding-left:30px;
+	}	
+	
+	.mapblock
+	{
+		display:block;
+	}
+}
+
+#samples, 
+.in-the-press-home-wrappersss, 
+.contact-wrapper, 
+.sample
+{
+	background:#fff !important;
+	z-index:100000;
+}
+
+.header-wrapper{
+	z-index:100000000 !important;
+}
